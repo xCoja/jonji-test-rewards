@@ -290,12 +290,14 @@ body {
   background: #0343a3;
   border: 2px solid transparent;
   border-radius: 6px;
-  color: white;
-  font-weight: 550;
+  color: #12161a;
+  font-weight: 1000;
   cursor: pointer;
   transition: 0.3s;
 }
-.claim-btn i { vertical-align: middle; position: relative; bottom: 1px; }
+
+
+.claim-btn i { vertical-align: middle; position: relative; bottom: 2px; }
 .claim-btn:hover { border: 2px solid #0343a3; background: transparent; color: white; }
 
 /* Optional popup (unchanged) */
@@ -419,4 +421,88 @@ body {
 /* Small fallback: if you want a glowing outline around the whole card */
 .card-wrap .card {
   box-shadow: 0 6px 30px rgba(0,0,0,0.6), 0 0 120px var(--accent-glow);
+}
+
+
+/* CLAIM BONUS POPUP */
+
+.claim-bonus-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+}
+
+.claim-bonus-content {
+  background: #131313;
+  border-radius: 10px;
+  max-width: 600px;
+  height: 400px;
+  position: relative;
+  border: 1px solid #444;
+  width: 100%;
+  margin: 10px 0;
+  text-align: left;
+}
+
+.claim-bonus-content h2 {
+  font-size: 18px;
+  margin-left: 20px;
+  text-align: center;
+  padding: 10px;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.claim-bonus-content ol {
+  margin-left: 30px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.claim-bonus-content a {
+  color: #4f9eed;
+  text-decoration: none;
+}
+
+.claim-bonus-content a:hover {
+  text-decoration: underline;
+}
+
+.claim-bonus-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.claim-bonus-button {
+  font-size: 18px;
+  margin-top: 20px;
+  color: #f8d406;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  z-index: 2;
+}
+
+.claim-bonus-text {
+  color: white;
+}
+
+.claim-bonus-button i {
+  margin-right: 8px;
+  z-index: 2;
 }
